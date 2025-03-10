@@ -83,12 +83,12 @@ function ajax_logger_enqueue_scripts() {
       if (empty($target_url_path) || strpos($_SERVER['REQUEST_URI'], $target_url_path) !== false) {
           wp_enqueue_script(
               'ajax-logger',
-              plugins_url('js/logger.js', __FILE__),
+              plugins_url('assets/js/logger.js', __FILE__),
               array('jquery'),
               '1.0',
               true
           );
-          
+
           wp_localize_script(
               'ajax-logger',
               'ajax_logger_data',
